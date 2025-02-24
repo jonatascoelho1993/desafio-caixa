@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.caixavidaeprevidencia.desafio.caixa.api.ProdutoControllerApiClient;
+import br.com.caixavidaeprevidencia.desafio.caixa.dtos.IdProdutoRequestDTO;
 import br.com.caixavidaeprevidencia.desafio.caixa.exceptions.CaixaException;
 
 
@@ -21,8 +22,8 @@ public class ProdutoFeignController {
 	
 
 	@PostMapping
-	public ResponseEntity<?> getProdutoById(@RequestBody Long idProduto) throws CaixaException {
-		return produtoClient.getProdutoById(idProduto);
+	public ResponseEntity<?> getProdutoById(@RequestBody IdProdutoRequestDTO request) throws CaixaException {
+		return produtoClient.getProdutoById(request.getId());
 	}
 
 }

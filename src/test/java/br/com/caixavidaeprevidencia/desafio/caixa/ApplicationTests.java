@@ -1,4 +1,4 @@
-package br.com.caixavidaeprevidencia.desafio_caixa;
+package br.com.caixavidaeprevidencia.desafio.caixa;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
