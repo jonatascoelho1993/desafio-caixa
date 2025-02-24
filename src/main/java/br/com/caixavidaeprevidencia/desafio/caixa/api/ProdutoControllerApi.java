@@ -6,9 +6,8 @@
 package br.com.caixavidaeprevidencia.desafio.caixa.api;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
 import br.com.caixavidaeprevidencia.desafio.caixa.dtos.ProdutoDTO;
 import io.swagger.annotations.Api;
@@ -23,9 +22,7 @@ public interface ProdutoControllerApi {
     @ApiOperation(value = "", nickname = "getProdutoById", notes = "", response = ProdutoDTO.class, tags={ "produto-controller", })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "OK", response = ProdutoDTO.class) })
-    @RequestMapping(value = "/api/produtos/{idProduto}",
-        produces = "*/*", 
-        method = RequestMethod.GET)
+    @GetMapping(value = "/api/produtos/{idProduto}")
     ResponseEntity<ProdutoDTO> getProdutoById(@ApiParam(value = "",required=true) @PathVariable("idProduto") Long idProduto);
 
 }
