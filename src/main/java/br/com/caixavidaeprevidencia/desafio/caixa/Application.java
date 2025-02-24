@@ -1,4 +1,4 @@
-package br.com.caixavidaeprevidencia.desafio_caixa;
+package br.com.caixavidaeprevidencia.desafio.caixa;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
